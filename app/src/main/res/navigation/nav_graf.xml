@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graf"
+    app:startDestination="@id/gameScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.memorygamedi.presentation.ui.screens.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_menuScreen"
+            app:destination="@id/menuScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="uz.gita.memorygamedi.presentation.ui.screens.MenuScreen"
+        android:label="screen_menu"
+        tools:layout="@layout/screen_menu">
+        <action
+            android:id="@+id/action_menuScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="uz.gita.memorygamedi.presentation.ui.screens.GameScreen"
+        android:label="screen_game"
+        tools:layout="@layout/screen_game">
+        <argument
+            android:name="level"
+            android:defaultValue="EASY"
+            app:argType="uz.infinity.memorygamebottcamp4.data.model.LevelEnum" />
+        <argument
+            android:name="levels"
+            app:argType="uz.gita.memorygamedi.data.model.LevelEnum"
+            android:defaultValue="EASY" />
+    </fragment>
+</navigation>

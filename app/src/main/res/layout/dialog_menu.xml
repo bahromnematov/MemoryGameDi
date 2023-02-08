@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:layout_width="250dp"
+    android:layout_height="200dp"
+    android:id="@+id/menuFrame"
+    android:background="@drawable/menu_frame"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/btn_continue"
+        android:background="@drawable/continue_btn"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toTopOf="@id/menuFrame"
+        app:layout_constraintLeft_toLeftOf="@id/menuFrame"
+        app:layout_constraintRight_toRightOf="@id/menuFrame"
+        app:layout_constraintBottom_toBottomOf="@id/menuFrame"
+        />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="New game"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_new_game"
+        android:background="@drawable/new_game_btn"
+        app:layout_constraintTop_toBottomOf="@id/btn_continue"
+        app:layout_constraintLeft_toLeftOf="@id/menuFrame"
+        app:layout_constraintRight_toRightOf="@id/menuFrame"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/monkey"
+        app:layout_constraintTop_toTopOf="@id/menuFrame"
+        app:layout_constraintBottom_toTopOf="@id/menuFrame"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
